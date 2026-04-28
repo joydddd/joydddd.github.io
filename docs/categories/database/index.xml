@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Database on Joy Dong</title>
+    <title>database on Joy Dong</title>
     <link>https://joydddd.github.io/categories/database/</link>
-    <description>Recent content in Database on Joy Dong</description>
-    <generator>Hugo</generator>
+    <description>Recent content in database on Joy Dong</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Last updated: Mar 2024 &lt;br&gt;Copyright &amp;copy; 2020 a hugo theme by [somrat](https://somrat.netlify.com)</copyright>
     <lastBuildDate>Tue, 12 May 2020 12:14:34 +0600</lastBuildDate>
@@ -14,14 +14,14 @@
       <link>https://joydddd.github.io/portfolio/project-3/</link>
       <pubDate>Tue, 12 May 2020 12:14:34 +0600</pubDate>
       <guid>https://joydddd.github.io/portfolio/project-3/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore&#xA;et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip&#xA;ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu&#xA;fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt&#xA;mollit anim id est laborum.&lt;/p&gt;</description>
+      <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
     </item>
     <item>
       <title>Project Title</title>
       <link>https://joydddd.github.io/portfolio/project-4/</link>
       <pubDate>Tue, 12 May 2020 12:14:34 +0600</pubDate>
       <guid>https://joydddd.github.io/portfolio/project-4/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore&#xA;et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip&#xA;ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu&#xA;fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt&#xA;mollit anim id est laborum.&lt;/p&gt;</description>
+      <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
     </item>
   </channel>
 </rss>

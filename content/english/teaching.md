@@ -1,7 +1,7 @@
 ---
 # title: "SERVICE"
 experience:
-  enable : true
+  enable : false
   title : "Teaching"
   experience_list:
     - name : "Graduate Student Instructor: EECS570 Parallel Computer Architecture"
