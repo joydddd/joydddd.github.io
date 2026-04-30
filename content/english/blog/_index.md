@@ -1,7 +1,7 @@
 ---
-title: "Oh My Blog!"
+title: "Blogs"
 description: "This is meta description."
-draft: true
+draft: false
 
 
 # custom style

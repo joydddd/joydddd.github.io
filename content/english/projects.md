@@ -4,6 +4,11 @@ experience:
   enable : true
   # title : "Projects"
   experience_list:
+    - name: "Timelock Drive: Isolated Time-Based Defense for Storage Systems"
+      company: "J. Rosenblum, <u>J. Dong</u>, P. Chen, S. Narayanasamy"
+      pin: false
+      tag: "Timelock" 
+      duration: "OSDI \'26" 
     - name : "FlexAttention: The Flexibility of PyTorch with the Performance of FlashAttention" 
       company: "<u>Joy Dong</u> *, Boyuan Feng *, Driss Guessous *, Yanbo Liang *, Horace He"
       pin: true

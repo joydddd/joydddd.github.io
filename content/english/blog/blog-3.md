@@ -2,7 +2,7 @@
 
 title: "R10K Based Out of Order Processor"
 image: "images/portfolio/EECS470rpt.jpg"
-draft: false
+draft: true
 ---
 
 This is the project report for University of Michigan course EECS470 Computer Architecture. We designed a 3-way scaled, R10K based out-of-order processor with advanced branch predictor, prefetching and non-blocked DCache with system verilog. The issue stage uses FIFO to help reduce clock cycle during reservation station selection.

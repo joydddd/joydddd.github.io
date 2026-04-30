@@ -63,8 +63,8 @@ link = "plugins/owl-carousel/owl.carousel.min.js"
 #################### default parameters ################################
 [params]
 favicon = "images/favicon.png"
-logo_light = "images/logo.png"
-logo_dark = "images/logo-dark.png"
+logo_light = "images/backgrounds/logo.jpg"
+logo_dark = "images/backgrounds/logo.jpg"
 logo_width = "150px"
 # Meta data
 description = "This is meta description"
@@ -139,8 +139,7 @@ weight = 5
 
 [[Languages.en.menu.main]]
 name = "Blogs"
-pre = "#"
-url = "blogs"
+url = "/blog/"
 weight = 9
 
 [[Languages.en.menu.main]]

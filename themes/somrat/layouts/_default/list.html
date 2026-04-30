@@ -5,17 +5,20 @@
 <style>{{.Params.custom_css | safeCSS}}</style>
 <section class="portfolio {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}}>
   <div class="container">
-    <h1 class="wow fadeInUp text-center mb-5" data-wow-duration="1.5s">{{ .Title }}</h1>
-    <div class="row wow fadeInUp" data-wow-duration="1.5s">
+    <h1 class="text-center mb-5" style="color: #f5871f; animation-duration: 0s;">{{ .Title }}</h1>
+    <div class="row">
       {{ $paginator:= .Paginate .Data.Pages }}
       {{ range $paginator.Pages }}
+      {{ $url := .Permalink }}
+      {{ with .Params.external_url }}{{ $url = . }}{{ end }}
       <div class="col-lg-4 col-sm-6 mb-4">
         <div class="card">
-          {{ if .Params.image }} <a class="card-img-wrapper" href="{{.Permalink}}"><img
+          {{ if .Params.image }} <a class="card-img-wrapper" href="{{ $url }}" {{ with .Params.external_url }}target="_blank" rel="noopener"{{ end }}><img
               src="{{.Params.image | absURL }}" alt="{{.Title}}" class="card-img-top"></a> {{ end }}
           <div class="card-body">
-            <h4 class="mb-2"><a class="card-title" href="{{.Permalink}}">{{.Title}}</a></h4>
-            <p class="card-text">{{.Summary}}</p>
+            <h4 class="mb-2"><a class="card-title" href="{{ $url }}" {{ with .Params.external_url }}target="_blank" rel="noopener"{{ end }}>{{.Title}}</a></h4>
+            {{ with .Params.description }}<p class="card-text">{{ . }}</p>{{ end }}
+            {{ with .Params.author }}<p class="card-text card-author">{{ . }}</p>{{ end }}
           </div>
         </div>
       </div>
