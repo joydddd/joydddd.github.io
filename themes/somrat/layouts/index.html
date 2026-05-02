@@ -396,7 +396,7 @@
                   <p> <a href="#" class="open-bibtex" data-bibtex-url="{{ .bibtex | absURL }}">[citeme]</a> </p>
                 {{ end }}
               </div>
-              {{ if .img }}
+              {{ if and .img .pin }}
               <div class="experience-image">
                 {{ if .link}}
                 {{ with .link }} <a href="{{ . | absURL}}"> {{ end }}

@@ -1,14 +1,23 @@
 ---
-title: "Publications"
+title: "Projects"
 experience:
   enable : true
   # title : "Projects"
   experience_list:
+    - name: "Helion: A High-Level DSL for Performance Portable Kernels"
+      tag: "Helion"
+      link: https://helionlang.com/index.html
+      pin: true
+      company: "J. Ansel, O. Ulgen, W. Feng, J. Choi, E. Che, N. Dhar, <u>J. Dong</u>, D. Guessous, M. Hoehnerbach, J. Liu, A. Loginov, S. Nay, M. Ren, N. J Riasanovsky, K. Selvam, H. Yu, P. Zhang, X. Zhang, P. Wu" 
+      cmt: "[[blog](https://pytorch.org/blog/helion/)] [[code](https://github.com/pytorch/helion)] [[doc](https://helionlang.com/index.html)]"
     - name: "Timelock Drive: Isolated Time-Based Defense for Storage Systems"
       company: "J. Rosenblum, <u>J. Dong</u>, P. Chen, S. Narayanasamy"
       pin: false
-      tag: "Timelock" 
+      tag: "Timelock"
+      link: https://www.usenix.org/conference/osdi26/presentation/rosenblum 
       duration: "OSDI \'26" 
+      bibtex: /bibtex/timelock.bib
+      cmt: "[[paper](https://www.usenix.org/conference/osdi26/presentation/rosenblum)]"
     - name : "FlexAttention: The Flexibility of PyTorch with the Performance of FlashAttention" 
       company: "<u>Joy Dong</u> *, Boyuan Feng *, Driss Guessous *, Yanbo Liang *, Horace He"
       pin: true
@@ -21,10 +30,11 @@ experience:
       🌟**Fast & Efficient**: Achive comparable performance to expert tuned kernels via JIT torch.compile.<br>
       🌟**Block Sparsity**:  Leverages block sparsity to further improve performance without manual optimization for a specific mask. "
       cmt: "*authors contributed equally to this work. <br>
-       [[poster]](https://mlsys.org/virtual/2025/poster/3286)
-       [[arxiv]](https://arxiv.org/abs/2412.05496)
-       [[blog](https://pytorch.org/blog/flexattention/)]
-       [[github](https://github.com/pytorch/pytorch)]"
+       [[paper]](https://mlsys.org/virtual/2025/poster/3286)
+       [[blog-I](https://pytorch.org/blog/flexattention/)]
+       [[blog-II](https://pytorch.org/blog/flexattention-for-inference/)]
+       [[blog-III](https://pytorch.org/blog/flexattention-flashattention-4-fast-and-flexible/)]
+       [[code](https://docs.pytorch.org/docs/2.11/nn.attention.flex_attention.html)]"
       bibtex: /bibtex/flexattn.bib
     - name : "Toleo: Scaling Freshness to Tera-scale Memory Using CXL and PIM"  # Toleo: Scaling Freshness to Tera-scale Memory Using CXL and PIM
       company : "<u>Juechu Dong</u>, Jonah Rosenblum, Satish Narayanasamy"
@@ -38,14 +48,16 @@ experience:
       cmt: "[[paper](https://dl.acm.org/doi/10.1145/3622781.3674180)]
             [[github](https://github.com/joydddd/Toleo)] [[poster](/downloads/ToleoPoster.pdf)]"
       bibtex: /bibtex/toleo.bib 
+      link: https://dl.acm.org/doi/10.1145/3622781.3674180
     - name : "SECRET-GWAS: Confidential Computing for Population-Scale GWAS"
-      cmt: "[[preprint](https://www.biorxiv.org/content/10.1101/2024.04.24.590989v1)] [[code](https://github.com/jonahrosenblum/SECRET-GWAS)]"
+      cmt: "[[paper](https://www.nature.com/articles/s43588-025-00856-z)] [[code](https://github.com/jonahrosenblum/SECRET-GWAS)]"
       bibtex: /bibtex/secret-gwas.bib
       company : "Jonah Rosenblum, <u>Juechu Dong</u>, Satish Narayanasamy"
-      duration : "Nature Computer Science -- under submission"
+      duration : "Nature Computational Science"
       content : "Develop a thousand-core platform on Azure Confidential Computing to conduct multi-institutional GWAS on millions of patients in less than a minute. <br>
                 Adapt Spark-based Hail genomic analysis framework to run on TEE under obliviousness requirement. <br>
                 Parallelize GWAS computation on 1k cores to achieve near linear speedup. "
+      link: https://www.nature.com/articles/s43588-025-00856-z
     - name : "mm2-gb: GPU Accelerated Minimap2 for Long Read DNA Mapping"
       company : "<u>Juechu Dong</u> *, Xueshen Liu *, Harisankar Sadasivan, Sriranjani Sitaraman, Satish Narayanasamy"
       tag: "mm2-gb"

@@ -3,7 +3,7 @@ news:
   title : "News"
   enable: true
   news_list: 
-    - name: "Our work on [Helion](https://github.com/pytorch/helion) during my second internship with the PyTorch team on is officially launched; see the [PyTorch blog](https://pytorch.org/blog/helion/)."
+    - name: "Our work on [Helion](#Helion) during my second internship with the PyTorch team on is officially launched; see the [PyTorch blog](https://pytorch.org/blog/helion/)."
       date: "Oct 2025"
     - name: "Excited to be selected to recieve the MLCommons ML and Systems Rising Star Award!!"
       date: "Mar 2025"

@@ -17,7 +17,7 @@
               src="{{.Params.image | absURL }}" alt="{{.Title}}" class="card-img-top"></a> {{ end }}
           <div class="card-body">
             <h4 class="mb-2"><a class="card-title" href="{{ $url }}" {{ with .Params.external_url }}target="_blank" rel="noopener"{{ end }}>{{.Title}}</a></h4>
-            {{ with .Params.description }}<p class="card-text">{{ . }}</p>{{ end }}
+            {{ with .Params.description }}<p class="card-text">{{ . | safeHTML }}</p>{{ end }}
             {{ with .Params.author }}<p class="card-text card-author">{{ . }}</p>{{ end }}
           </div>
         </div>

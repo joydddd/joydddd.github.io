@@ -152,7 +152,7 @@ if (!doNotTrack) {
         </li>
         
         <li class="menu-item hvr-underline-from-left 1">
-          <a href="https://joydddd.github.io/#blogs">Blogs</a>
+          <a href="https://joydddd.github.io/blog/">Blogs</a>
         </li>
         
         <li class="menu-item hvr-underline-from-left 1">
@@ -206,7 +206,7 @@ if (!doNotTrack) {
               </li>
               
               <li class="hvr-shutter-out-vertical mobile-menu-item item-1">
-                <a href="https://joydddd.github.io/#blogs">Blogs</a>
+                <a href="https://joydddd.github.io/blog/">Blogs</a>
               </li>
               
               <li class="hvr-shutter-out-vertical mobile-menu-item item-1">
@@ -305,7 +305,7 @@ Joy Dong is a PhD Candidate at the University of Michigan specializing in comput
             <h3>[Oct 2025]</h3> 
             </div>
             <div class="single-news-content" id="single-news-content">
-            <p> Our work on <a href="https://github.com/pytorch/helion">Helion</a> during my second internship with the PyTorch team on is officially launched; see the <a href="https://pytorch.org/blog/helion/">PyTorch blog</a>.</p>
+            <p> Our work on <a href="#Helion">Helion</a> during my second internship with the PyTorch team on is officially launched; see the <a href="https://pytorch.org/blog/helion/">PyTorch blog</a>.</p>
             </div>
           </div>
         </li>
@@ -667,13 +667,69 @@ Joy Dong is a PhD Candidate at the University of Michigan specializing in comput
 </style>
 <section class="experience "  id="projects">
   <div class="container">
-    <h1>Publications</h1>
+    <h1>Projects</h1>
     <div class="row experience-skill">
       
       
       <div class="col-lg-12 col-sm-12 col-12 experience wow">
         <h3></h3>
         <ul class="experience-chart">
+          
+          <li id="Helion">
+            <div class="single-experience align-self-center align-items-start d-flex ">
+              <div class="single-experience-text">
+                
+                <h4>
+                  
+                   <a href="https://helionlang.com/index.html"> 
+                  Helion: A High-Level DSL for Performance Portable Kernels
+                  </a> 
+                  
+                </h4>
+                 <span>J. Ansel, O. Ulgen, W. Feng, J. Choi, E. Che, N. Dhar, <u>J. Dong</u>, D. Guessous, M. Hoehnerbach, J. Liu, A. Loginov, S. Nay, M. Ren, N. J Riasanovsky, K. Selvam, H. Yu, P. Zhang, X. Zhang, P. Wu</span> 
+
+                
+                    <p>[<a href="https://pytorch.org/blog/helion/">blog</a>] [<a href="https://github.com/pytorch/helion">code</a>] [<a href="https://helionlang.com/index.html">doc</a>]  </p>
+                
+              </div>
+              
+            </div>
+            
+            <div class="single-experience d-flex align-self-center align-items-center ">
+              <div class="col-lg-12 col-sm-12 col-12 single-experience-text">
+              
+              </div>
+            </div>
+            
+          </li>
+          
+          <li id="Timelock">
+            <div class="single-experience align-self-center align-items-start d-flex ">
+              <div class="single-experience-text">
+                 <span><b>OSDI &lsquo;26</b></span> 
+                <h4>
+                  
+                   <a href="https://www.usenix.org/conference/osdi26/presentation/rosenblum"> 
+                  Timelock Drive: Isolated Time-Based Defense for Storage Systems
+                  </a> 
+                  
+                </h4>
+                 <span>J. Rosenblum, <u>J. Dong</u>, P. Chen, S. Narayanasamy</span> 
+
+                
+                    <p>[<a href="https://www.usenix.org/conference/osdi26/presentation/rosenblum">paper</a>]  <a href="#" class="open-bibtex" data-bibtex-url="https://joydddd.github.io/bibtex/timelock.bib">[citeme]</a>  </p>
+                
+              </div>
+              
+            </div>
+            
+            <div class="single-experience-content d-flex align-self-center align-items-center ">
+              <div class="col-lg-12 col-sm-12 col-12 single-experience-text">
+              
+              </div>
+            </div>
+            
+          </li>
           
           <li id="FlexAttn">
             <div class="single-experience align-self-center align-items-start d-flex ">
@@ -689,7 +745,7 @@ Joy Dong is a PhD Candidate at the University of Michigan specializing in comput
                  <span><u>Joy Dong</u> *, Boyuan Feng *, Driss Guessous *, Yanbo Liang *, Horace He</span> 
 
                 
-                    <p>*authors contributed equally to this work. <br> <a href="https://mlsys.org/virtual/2025/poster/3286">[poster]</a> <a href="https://arxiv.org/abs/2412.05496">[arxiv]</a> [<a href="https://pytorch.org/blog/flexattention/">blog</a>] [<a href="https://github.com/pytorch/pytorch">github</a>]  <a href="#" class="open-bibtex" data-bibtex-url="https://joydddd.github.io/bibtex/flexattn.bib">[citeme]</a>  </p>
+                    <p>*authors contributed equally to this work. <br> <a href="https://mlsys.org/virtual/2025/poster/3286">[paper]</a> [<a href="https://pytorch.org/blog/flexattention/">blog-I</a>] [<a href="https://pytorch.org/blog/flexattention-for-inference/">blog-II</a>] [<a href="https://pytorch.org/blog/flexattention-flashattention-4-fast-and-flexible/">blog-III</a>] [<a href="https://docs.pytorch.org/docs/2.11/nn.attention.flex_attention.html">code</a>]  <a href="#" class="open-bibtex" data-bibtex-url="https://joydddd.github.io/bibtex/flexattn.bib">[citeme]</a>  </p>
                 
               </div>
               
@@ -717,20 +773,15 @@ Joy Dong is a PhD Candidate at the University of Michigan specializing in comput
                  <span><b>ASPLOS &lsquo;24</b></span> 
                 <h4>
                   
+                   <a href="https://dl.acm.org/doi/10.1145/3622781.3674180"> 
                   Toleo: Scaling Freshness to Tera-scale Memory Using CXL and PIM
+                  </a> 
                   
                 </h4>
                  <span><u>Juechu Dong</u>, Jonah Rosenblum, Satish Narayanasamy</span> 
 
                 
                     <p>[<a href="https://dl.acm.org/doi/10.1145/3622781.3674180">paper</a>] [<a href="https://github.com/joydddd/Toleo">github</a>] [<a href="/downloads/ToleoPoster.pdf">poster</a>]  <a href="#" class="open-bibtex" data-bibtex-url="https://joydddd.github.io/bibtex/toleo.bib">[citeme]</a>  </p>
-                
-              </div>
-              
-              <div class="experience-image">
-                
-                 <img class="img-fluid" src="https://joydddd.github.io/images/portfolio/Toleo.png" alt="experience">
-                </a> 
                 
               </div>
               
@@ -747,16 +798,18 @@ Joy Dong is a PhD Candidate at the University of Michigan specializing in comput
           <li id="">
             <div class="single-experience align-self-center align-items-start d-flex ">
               <div class="single-experience-text">
-                 <span><b>Nature Computer Science &ndash; under submission</b></span> 
+                 <span><b>Nature Computational Science</b></span> 
                 <h4>
                   
+                   <a href="https://www.nature.com/articles/s43588-025-00856-z"> 
                   SECRET-GWAS: Confidential Computing for Population-Scale GWAS
+                  </a> 
                   
                 </h4>
                  <span>Jonah Rosenblum, <u>Juechu Dong</u>, Satish Narayanasamy</span> 
 
                 
-                    <p>[<a href="https://www.biorxiv.org/content/10.1101/2024.04.24.590989v1">preprint</a>] [<a href="https://github.com/jonahrosenblum/SECRET-GWAS">code</a>]  <a href="#" class="open-bibtex" data-bibtex-url="https://joydddd.github.io/bibtex/secret-gwas.bib">[citeme]</a>  </p>
+                    <p>[<a href="https://www.nature.com/articles/s43588-025-00856-z">paper</a>] [<a href="https://github.com/jonahrosenblum/SECRET-GWAS">code</a>]  <a href="#" class="open-bibtex" data-bibtex-url="https://joydddd.github.io/bibtex/secret-gwas.bib">[citeme]</a>  </p>
                 
               </div>
               
@@ -785,14 +838,6 @@ Joy Dong is a PhD Candidate at the University of Michigan specializing in comput
 
                 
                     <p>*both authors contributed equally to this work. <br> [<a href="https://dl.acm.org/doi/10.1145/3698587.3701366">paper</a>] [<a href="https://github.com/Minimap2onGPU/mm2-gb">github</a>] <a href="/downloads/mm2-gb-BioSys-slides.pdf">[slides]</a> [<a href="https://rocm.blogs.amd.com/ecosystems-and-partners/university-of-michigan/README.html">blog</a>]  <a href="#" class="open-bibtex" data-bibtex-url="https://joydddd.github.io/bibtex/mm2-gb.bib">[citeme]</a>  </p>
-                
-              </div>
-              
-              <div class="experience-image">
-                
-                 <a href="https://dl.acm.org/doi/10.1145/3698587.3701366"> 
-                 <img class="img-fluid linked" src="https://joydddd.github.io/images/portfolio/mm2-workflow.png" alt="experience">
-                </a> 
                 
               </div>
               
