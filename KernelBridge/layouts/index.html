@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Params.meta_title | default .Title | default "KernelBridge" }}</title>
+  <meta name="description" content="{{ .Params.meta_description | default "" }}">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "Roboto", "ui-sans-serif", "system-ui", "sans-serif"]
+          },
+          colors: {
+            kbBg: "#050816",
+            kbPanel: "#0d1324",
+            kbBorder: "#22304f",
+            kbText: "#d7e3ff",
+            kbMuted: "#8ca0cc"
+          },
+          boxShadow: {
+            glow: "0 0 80px rgba(125, 211, 252, 0.14)"
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-kbBg text-kbText font-sans">
+  <main>
+    <section class="relative overflow-hidden border-b border-kbBorder/70">
+      <div class="absolute inset-0 bg-gradient-to-b from-[#0b122a] via-kbBg to-kbBg"></div>
+      <svg class="absolute inset-0 h-full w-full opacity-40" viewBox="0 0 1600 900" aria-hidden="true">
+        <defs>
+          <linearGradient id="meshStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#7dd3fc" stop-opacity="0.45"></stop>
+            <stop offset="100%" stop-color="#a78bfa" stop-opacity="0.18"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="url(#meshStroke)" fill="none">
+          <path d="M-100 730 Q300 350 820 500 T1700 390"></path>
+          <path d="M-120 620 Q350 260 860 420 T1700 300"></path>
+          <path d="M-80 810 Q320 460 880 610 T1700 500"></path>
+          <path d="M90 860 L560 280 L1050 670 L1510 180"></path>
+          <path d="M80 170 L480 520 L880 150 L1260 540 L1600 200"></path>
+          <circle cx="480" cy="520" r="6" fill="#7dd3fc"></circle>
+          <circle cx="880" cy="150" r="5" fill="#a78bfa"></circle>
+          <circle cx="1050" cy="670" r="5" fill="#7dd3fc"></circle>
+          <circle cx="1260" cy="540" r="6" fill="#a78bfa"></circle>
+        </g>
+      </svg>
+      <div class="absolute left-1/4 top-20 h-72 w-72 -translate-x-1/2 rounded-full bg-sky-400/20 blur-3xl"></div>
+      <div class="absolute bottom-8 right-1/4 h-64 w-64 translate-x-1/2 rounded-full bg-violet-400/20 blur-3xl"></div>
+
+      <div class="relative mx-auto max-w-7xl px-6 py-24 md:py-32 lg:px-10">
+        <p class="mb-6 inline-flex items-center rounded-full border border-kbBorder bg-kbPanel/70 px-4 py-1.5 text-xs tracking-[0.22em] text-kbMuted uppercase">
+          {{ .Params.hero_badge }}
+        </p>
+        <h1 class="max-w-4xl text-5xl font-extrabold tracking-tight text-white md:text-7xl">
+          {{ .Params.name | default .Title }}
+        </h1>
+        <p class="mt-6 max-w-3xl text-xl font-medium text-kbText md:text-2xl">
+          {{ .Params.subtitle }}
+        </p>
+      </div>
+    </section>
+
+    {{- with site.GetPage "/vision" }}
+    {{- with .Params }}
+    <section class="mx-auto max-w-7xl px-6 py-16 lg:px-10">
+      <h2 class="text-3xl font-bold text-white md:text-4xl">{{ .heading }}</h2>
+      <p class="mt-6 max-w-5xl text-lg leading-relaxed text-kbText">
+        {{ .vision }}
+      </p>
+    </section>
+    {{- end }}
+    {{- end }}
+
+    {{- with site.GetPage "/problem" }}
+    {{- with .Params }}
+    <section class="mx-auto max-w-7xl px-6 py-10 lg:px-10">
+      <h2 class="text-3xl font-bold text-white md:text-4xl">{{ .heading }}</h2>
+      <p class="mt-4 max-w-4xl text-kbMuted">
+        {{ .intro }}
+      </p>
+      <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+        {{- range $i, $col := .columns }}
+        {{- $base := "rounded-2xl border border-kbBorder p-6" -}}
+        {{- $panel := printf "%s bg-kbPanel/70" $base -}}
+        {{- $grad := printf "%s bg-gradient-to-br from-sky-400/10 to-violet-400/10" $base -}}
+        <article class="{{ if $col.highlight }}{{ $grad }}{{ else }}{{ $panel }}{{ if eq $i 0 }} shadow-glow{{ end }}{{ end }}">
+          <h3 class="text-lg font-semibold text-white">{{ $col.title }}</h3>
+          <p class="mt-4 text-kbText">{{ $col.primary }}</p>
+          <p class="mt-3 text-sm text-kbMuted">{{ $col.detail }}</p>
+        </article>
+        {{- end }}
+      </div>
+      {{- with .callouts }}
+      <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+        {{- range $i, $c := . }}
+        <div class="rounded-xl border border-kbBorder/70 bg-kbPanel/60 p-4">
+          <p class="text-sm font-semibold uppercase tracking-wide {{- if eq $i 0 }} text-sky-300{{ else }} text-violet-300{{ end }}">{{ $c.label }}</p>
+          <p class="mt-2 text-sm text-kbMuted">{{ $c.text }}</p>
+        </div>
+        {{- end }}
+      </div>
+      {{- end }}
+    </section>
+    {{- end }}
+    {{- end }}
+
+    {{- with site.GetPage "/core" }}
+    {{- with .Params }}
+    <section class="mx-auto max-w-7xl px-6 py-16 lg:px-10">
+      <h2 class="text-3xl font-bold text-white md:text-4xl">{{ .heading }}</h2>
+      <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+        {{- range $i, $p := .pillars }}
+        <article class="rounded-2xl border border-kbBorder bg-kbPanel/70 p-6">
+          <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl {{ cond (eq $i 0) "bg-sky-400/15" (cond (eq $i 1) "bg-violet-400/15" "bg-cyan-400/15") }}">
+            {{- if eq $i 0 -}}
+            <svg viewBox="0 0 24 24" class="h-7 w-7 text-sky-300" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M3 5h8v6H3zM13 13h8v6h-8zM3 15h8M13 9h8"></path>
+              <path d="M11 8l2 2m-2 4l2-2"></path>
+            </svg>
+            {{- else if eq $i 1 -}}
+            <svg viewBox="0 0 24 24" class="h-7 w-7 text-violet-300" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <circle cx="12" cy="12" r="3.5"></circle>
+              <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.8 4.8l2.2 2.2M17 17l2.2 2.2M19.2 4.8L17 7M7 17l-2.2 2.2"></path>
+            </svg>
+            {{- else -}}
+            <svg viewBox="0 0 24 24" class="h-7 w-7 text-cyan-300" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+              <path d="M9 4v16M15 4v16M4 9h16M4 15h16"></path>
+            </svg>
+            {{- end -}}
+          </div>
+          <h3 class="text-lg font-semibold text-white">{{ $p.title }}</h3>
+          <p class="mt-3 text-kbText">{{ $p.text }}</p>
+        </article>
+        {{- end }}
+      </div>
+    </section>
+    {{- end }}
+    {{- end }}
+
+    {{- with site.GetPage "/projects" }}
+    {{- with .Params }}
+    <section class="mx-auto max-w-7xl px-6 py-6 lg:px-10">
+      <div class="rounded-3xl border border-kbBorder bg-gradient-to-br from-sky-400/10 via-kbPanel to-violet-400/10 p-8 md:p-10">
+        <h2 class="text-3xl font-bold text-white md:text-4xl">{{ .heading }}</h2>
+        <p class="mt-5 text-lg text-kbText">{{ .intro }}</p>
+        <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+          {{- range .items }}
+          <div class="rounded-xl border border-kbBorder/70 bg-kbPanel/60 p-4 text-kbText">
+            <p class="font-semibold text-white">
+              {{- if .url -}}
+              <a href="{{ .url }}" class="text-white underline decoration-sky-400/40 underline-offset-2 hover:text-sky-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-400"{{- if strings.HasPrefix .url "http" }} target="_blank" rel="noopener noreferrer"{{- end -}}>{{ .name }}</a>
+              {{- else -}}
+              {{ .name }}
+              {{- end -}}
+            </p>
+            <p class="mt-2 text-sm text-kbMuted">{{ .description }}</p>
+          </div>
+          {{- end }}
+        </div>
+      </div>
+    </section>
+    {{- end }}
+    {{- end }}
+
+    {{- with site.GetPage "/team" }}
+    {{- with .Params }}
+    <section class="mx-auto max-w-7xl px-6 py-16 lg:px-10">
+      <h2 class="text-3xl font-bold text-white md:text-4xl">{{ .heading }}</h2>
+      <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+        {{- range .members }}
+        <article class="rounded-2xl border border-kbBorder bg-kbPanel/70 p-6">
+          <p class="text-xl font-semibold text-white">{{ .name }}</p>
+          <p class="mt-2 text-kbMuted">{{ .role }}</p>
+        </article>
+        {{- end }}
+      </div>
+    </section>
+    {{- end }}
+    {{- end }}
+  </main>
+</body>
+</html>

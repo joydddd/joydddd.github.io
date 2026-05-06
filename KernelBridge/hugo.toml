@@ -1,0 +1,6 @@
+baseURL = "https://joydddd.github.io/KernelBridge/"
+languageCode = "en-us"
+title = "KernelBridge"
+
+[params]
+  description = "KernelBridge research initiative landing page."
