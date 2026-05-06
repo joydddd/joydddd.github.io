@@ -45,7 +45,7 @@
       {{- /* Path is under KernelBridge/static/. Omit key entirely for default; set hero_background: "" to hide. */ -}}
       {{- $hbPath := "images/hero-bridge.svg" -}}
       {{- if isset .Params "hero_background" -}}
-        {{- $hbPath = strings.TrimSpace (.Params.hero_background | print) -}}
+        {{- $hbPath = print .Params.hero_background -}}
       {{- end -}}
       {{- if $hbPath -}}
       {{- /* sizing / position / opacity live in layout, not front matter */ -}}
@@ -121,7 +121,7 @@
       <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
         {{- range $i, $p := .pillars }}
         {{- $iconPath := "" -}}
-        {{- if isset $p "icon" -}}{{- with index $p "icon" -}}{{- $iconPath = strings.TrimSpace (print .) -}}{{- end -}}{{- end -}}
+        {{- if isset $p "icon" -}}{{- with index $p "icon" -}}{{- $iconPath = print . -}}{{- end -}}{{- end -}}
         {{- if eq $iconPath "" -}}{{- if lt $i (len $coreIconDefaults) -}}{{- $iconPath = index $coreIconDefaults $i -}}{{- end -}}{{- end -}}
         <article class="rounded-2xl border border-joyBorder bg-joyBg p-6 shadow-sm">
           {{- if ne $iconPath "" -}}
@@ -149,7 +149,7 @@
           <div class="rounded-xl border border-joyBorder bg-white/90 p-4 text-joyInk backdrop-blur-sm">
             <p class="font-semibold text-joyHeading">
               {{- if .url -}}
-              <a href="{{ .url }}" class="border-b border-dashed border-joyAccent/70 text-joyHeading decoration-transparent hover:border-solid hover:border-joyAccent hover:text-joyAccent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-joyAccent"{{- if strings.HasPrefix .url "http" }} target="_blank" rel="noopener noreferrer"{{- end -}}>{{ .name }}</a>
+              <a href="{{ .url }}" class="border-b border-dashed border-joyAccent/70 text-joyHeading decoration-transparent hover:border-solid hover:border-joyAccent hover:text-joyAccent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-joyAccent"{{- if findRE "^https?:" .url }} target="_blank" rel="noopener noreferrer"{{- end -}}>{{ .name }}</a>
               {{- else -}}
               {{ .name }}
               {{- end -}}
