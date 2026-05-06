@@ -2,7 +2,7 @@
 title: "Fully-Autonomous SoC"
 image: "images/portfolio/FASoC.jpg"
 description: "This is meta description."
-draft: false
+draft: true
 ---
 
 

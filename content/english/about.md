@@ -16,7 +16,7 @@ custom_css: ""
 
 
 ---
-Greetings from Joy! Welcome to my page. My Chinese name is 董珏初 Juechu (pronounced ge ü e, chew). If you find it hard to pronounce my name in mandarin, I'm totally fine with Joy.😊 <br>
+Hi there, I'm Joy — glad you stopped by! 😊 My full Chinese name is 董珏初 Juechu (pronounced roughly *ge-ü-e, chew*), but Joy works just fine in everyday life. <br>
 
 **Bio:**<br>
-Juechu (Joy) Dong is a PhD candidate at the <a href="https://cse.engin.umich.edu/"> University of Michigan CSE department</a> advised by <a href="https://web.eecs.umich.edu/~nsatish/">Prof. Satish Narayanasamy</a>. She studies emerging technologies in computer architecture and systems, with a focus on GPU programming model and confidential computing. Her work seeks to democratize kernel customization by building flexible and adaptive infrastructure for mapping novel algorithms to GPU hardware. Joy received the 2024 Rackham International Student Fellowship and the MLCommons ML and Systems Rising Star Award 2025.
+Joy Dong is a PhD Candidate at the University of Michigan specializing in computer architecture and GPU programmability, where she is advised by <a href="https://web.eecs.umich.edu/~nsatish/">Prof. Satish Narayanasamy</a>. Her research focuses on building the software stack for the next generation of AI, specifically optimizing GPU kernels to make large-scale machine learning more efficient and accessible. She previously worked on [FlexAttention](#FlexAttn) and [Helion](https://github.com/pytorch/helion) at Meta PyTorch and CuTe DSL ecosystem at Nvidia. 

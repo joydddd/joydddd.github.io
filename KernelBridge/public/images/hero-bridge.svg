@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 720" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="cable" x1="8%" y1="0%" x2="92%" y2="0%">
+      <stop offset="0%" stop-color="#f5871f" stop-opacity="0.7"/>
+      <stop offset="45%" stop-color="#d7b59c" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#f5871f" stop-opacity="0.65"/>
+    </linearGradient>
+    <linearGradient id="deckFill" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.04"/>
+    </linearGradient>
+    <linearGradient id="pylon" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.22"/>
+    </linearGradient>
+  </defs>
+  <!-- soft atmosphere -->
+  <ellipse cx="960" cy="520" rx="780" ry="120" fill="#f5871f" fill-opacity="0.04"/>
+  <!-- distant curve -->
+  <path stroke="#d7b59c" stroke-opacity="0.18" stroke-width="1.3" d="M-40 420 C 360 520, 520 380, 960 440 S 1520 360, 1960 400"/>
+  <!-- left pylon -->
+  <path fill="url(#pylon)" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1.5" d="M320 640 L320 220 L380 250 L380 640 Z"/>
+  <path stroke="#f5871f" stroke-opacity="0.4" stroke-width="1.2" d="M350 260 L350 640 M320 640 L380 640"/>
+  <!-- right pylon -->
+  <path fill="url(#pylon)" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1.5" d="M1540 640 L1540 220 L1480 250 L1480 640 Z"/>
+  <path stroke="#f5871f" stroke-opacity="0.4" stroke-width="1.2" d="M1510 260 L1510 640 M1480 640 L1540 640"/>
+  <!-- main cables -->
+  <path stroke="url(#cable)" stroke-width="2.8" stroke-linecap="round" d="M380 300 C 720 560, 1200 560, 1540 300"/>
+  <path stroke="url(#cable)" stroke-width="1.2" stroke-opacity="0.55" stroke-linecap="round" d="M360 340 C 720 620, 1200 620, 1560 340"/>
+  <!-- suspenders -->
+  <g stroke="#ffffff" stroke-opacity="0.22" stroke-width="1.1" stroke-linecap="round">
+    <path d="M480 430 L480 592"/>
+    <path d="M620 500 L620 602"/>
+    <path d="M760 550 L760 612"/>
+    <path d="M900 572 L900 622"/>
+    <path d="M960 580 L960 626"/>
+    <path d="M1020 572 L1020 622"/>
+    <path d="M1160 550 L1160 612"/>
+    <path d="M1300 500 L1300 602"/>
+    <path d="M1440 430 L1440 592"/>
+  </g>
+  <!-- deck -->
+  <path fill="url(#deckFill)" stroke="#f5871f" stroke-opacity="0.35" stroke-width="1.3" d="M360 592 L1560 592 L1565 632 L355 632 Z"/>
+  <path stroke="#ffffff" stroke-opacity="0.2" stroke-width="2.2" stroke-linecap="round" d="M120 632 L360 592 M1800 632 L1560 592"/>
+  <!-- truss hint -->
+  <g stroke="#d7b59c" stroke-opacity="0.12" stroke-width="1">
+    <path d="M420 592 L880 548 M1040 548 L1500 592"/>
+    <path d="M720 592 L900 548 M1080 548 L1200 592"/>
+  </g>
+  <!-- anchors -->
+  <path stroke="#ffffff" stroke-opacity="0.1" stroke-width="2" d="M80 640 L400 640 M1840 640 L1520 640"/>
+  <!-- cable joints -->
+  <circle cx="380" cy="300" r="6" fill="#f5871f" fill-opacity="0.55"/>
+  <circle cx="1540" cy="300" r="6" fill="#f5871f" fill-opacity="0.55"/>
+  <circle cx="960" cy="580" r="4.5" fill="#d7b59c" fill-opacity="0.4"/>
+</svg>

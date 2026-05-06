@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+  <!-- abstract IC package: pads + die -->
+  <rect x="8" y="8" width="16" height="16" rx="1.6" stroke="rgba(255,255,255,0.92)" stroke-width="1.4"></rect>
+  <rect x="11.6" y="11.6" width="8.8" height="8.8" rx="1" stroke="rgba(245,135,31,0.95)" stroke-width="1"></rect>
+  <path stroke="rgba(255,255,255,0.5)" stroke-width="1.1" stroke-linecap="round" d="M14 22h4"></path>
+  <path stroke="rgba(245,135,31,0.75)" stroke-width="0.9" stroke-linecap="round" d="M13 13.6h6M13 18.4h6"></path>
+  <!-- pins top/bottom -->
+  <path stroke="rgba(255,255,255,0.72)" stroke-width="1.1" stroke-linecap="round" d="M12 8V6 M16 8V6 M20 8V6 M24 14h2 M24 18h2 M20 24v2 M16 24v2 M12 24v2 M8 18H6 M8 14H6"></path>
+</svg>

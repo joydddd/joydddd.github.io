@@ -35,7 +35,7 @@ margin-left: -20px;
 
 .content a {
   color: inherit;
-  border-bottom: 2px dashed #212121;
+  border-bottom: 2px dashed #f5871f;
 }
 
 
@@ -1538,7 +1538,7 @@ ul.skill-chart h4 {
 .portfolio h1:before {
   content: "";
   height: 5px;
-  background: #6f6f6f;
+  background: #f5871f;
   position: absolute;
   top: -15px;
   left: 46.5%;
@@ -2559,6 +2559,9 @@ textarea.form-control::-webkit-input-placeholder,
 .card-img-top {
   border-radius: 0;
   transition: .2s ease;
+  height: 160px;
+  object-fit: contain;
+  object-position: center;
 }
 
 .card-body {
@@ -2566,11 +2569,20 @@ textarea.form-control::-webkit-input-placeholder,
 }
 
 .card-title {
-  color: #6f6f6f;
+  font-size: 18px;
+  font-weight: 700;
+  color: #432c36;
+  line-height: 1.4;
 }
 
 .card-title:hover {
+  color: #f5871f;
+}
+
+.card-author {
+  font-size: 13px;
   color: #6f6f6f;
+  margin-top: -8px;
 }
 
 .card-img-wrapper {
