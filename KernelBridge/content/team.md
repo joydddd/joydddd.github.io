@@ -10,4 +10,6 @@ members:
     role: "Ph.D. Candidate"
   - name: "Satish Narayanasamy"
     role: "Professor"
+  - name: "Kelly Goss"
+    role: "Undergraduate Researcher"
 ---

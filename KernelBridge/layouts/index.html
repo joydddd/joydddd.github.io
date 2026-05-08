@@ -146,7 +146,7 @@
         <p class="mt-5 text-lg text-joyInk">{{ .intro }}</p>
         <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
           {{- range .items }}
-          <div class="rounded-xl border border-joyBorder bg-white/90 p-4 text-joyInk backdrop-blur-sm">
+          <div class="flex flex-col rounded-xl border border-joyBorder bg-white/90 p-4 text-joyInk backdrop-blur-sm">
             <p class="font-semibold text-joyHeading">
               {{- if .url -}}
               <a href="{{ .url }}" class="border-b border-dashed border-joyAccent/70 text-joyHeading decoration-transparent hover:border-solid hover:border-joyAccent hover:text-joyAccent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-joyAccent"{{- if findRE "^https?:" .url }} target="_blank" rel="noopener noreferrer"{{- end -}}>{{ .name }}</a>
@@ -154,7 +154,13 @@
               {{ .name }}
               {{- end -}}
             </p>
-            <p class="mt-2 text-sm text-joyMuted">{{ .description }}</p>
+            <p class="mt-2 flex-1 text-sm text-joyMuted">{{ .description }}</p>
+            {{- if .collab_logo }}
+            <div class="mt-3 flex items-center gap-2 border-t border-joyBorder/50 pt-3">
+              <span class="text-xs text-joyMuted">w/</span>
+              <img src="{{ .collab_logo | absURL }}" alt="{{ .collab_name }}" class="h-4 w-auto" loading="lazy" decoding="async">
+            </div>
+            {{- end }}
           </div>
           {{- end }}
         </div>
@@ -167,7 +173,7 @@
     {{- with .Params }}
     <section class="mx-auto max-w-7xl bg-white px-6 py-16 lg:px-10">
       <h2 class="text-3xl font-bold text-joyHeading md:text-4xl">{{ .heading }}</h2>
-      <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
         {{- range .members }}
         <article class="rounded-2xl border-2 border-joyBorder bg-joySurface p-6 shadow-sm">
           <p class="text-xl font-semibold text-joyHeading">{{ .name }}</p>
